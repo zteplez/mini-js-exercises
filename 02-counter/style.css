@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: red;
+}
+.counter-text{
+    font-size: 3rem;
+    letter-spacing: .3rem;
+    font-weight: bold;
+    transform: translateY(-100px);
+
+}
+.counter-value{
+    font-size: 5rem;
+    transform: translateY(-100px);
+}
+.counter-buttons{
+    transform: translateY(-100px);
+}
