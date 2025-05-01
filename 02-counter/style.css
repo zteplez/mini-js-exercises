@@ -11,18 +11,19 @@
     align-items: center;
     flex-direction: column;
     gap: 2rem;
-    background-color: red;
+    background-color: #f1f5f8;
 }
 .counter-text{
-    font-size: 3rem;
+    font-size: 4rem;
     letter-spacing: .3rem;
     font-weight: bold;
     transform: translateY(-100px);
-
+    color: #102b42;
 }
 .counter-value{
-    font-size: 5rem;
+    font-size: 6rem;
     transform: translateY(-100px);
+    color: gray;
 }
 .counter-buttons{
     transform: translateY(-100px);
