@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.navbar{
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.3);
+    background-color: #eeeeee; 
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex: 1;
+}
+.nav-buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.container{
+    background-color: black;
+    flex: 9;
+}
+.nav-btn{
+    font-size: 1.5rem;
+    letter-spacing: .2rem;
+}
