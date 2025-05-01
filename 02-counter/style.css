@@ -27,4 +27,24 @@
 }
 .counter-buttons{
     transform: translateY(-100px);
+    display: flex;
+    width: 50vw;
+    justify-content: center;
+    gap: 30px;
+}
+.counter-buttons button{
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+.decrease{
+    background-color: red;
+}
+.increase{
+    background-color: #4caf50;
+}
+.reset{
+    background-color: orange;
 }
