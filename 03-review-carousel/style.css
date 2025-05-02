@@ -3,3 +3,37 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.container{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.modal-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid red;
+    width: 40vw;
+}
+.modal-cart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 8px 2rem;
+    height: 50vh;
+}
+.modal-title{
+    font-size: 3rem;
+    letter-spacing: 3px;
+    padding: 3rem 0rem;
+}
+.person-img img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
