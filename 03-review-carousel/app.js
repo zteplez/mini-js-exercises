@@ -13,6 +13,7 @@ class Person {
 
   const nextBtn = document.querySelector(".right");
   const prevBtn = document.querySelector(".left");
+  const supriseButton =  document.querySelector(".suprise-btn");
 
   let personIndex = 0;
 
@@ -36,9 +37,15 @@ class Person {
     updateModal();
   });
   prevBtn.addEventListener("click", () => {
-    personIndex = (personIndex - 1)  % persons.length
-    console.log(persons[personIndex]);    updateModal();
+    personIndex--;
+    if(personIndex < 0) personIndex = persons.length - 1 ;
+    console.log(persons[personIndex]);    
+    updateModal();
+  });
 
+  supriseButton.addEventListener("click", () => {
+    personIndex = Math.floor(Math.random() * persons.length);
+    updateModal();
   });
 
   function updateModal(){
@@ -52,5 +59,4 @@ class Person {
     personName.innerText = currentPerson.name;
     personJob.innerText = currentPerson.job;
     personDescription.innerText = currentPerson.description;
-
   }
