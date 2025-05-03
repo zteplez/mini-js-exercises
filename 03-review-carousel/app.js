@@ -11,8 +11,8 @@ class Person {
     }
   }
 
-  const nextBtn = document.querySelector(".right");
-  const prevBtn = document.querySelector(".left");
+  const nextBtn = document.querySelector(".next");
+  const prevBtn = document.querySelector(".prev");
   const supriseButton =  document.querySelector(".suprise-btn");
 
   let personIndex = 0;
