@@ -9,14 +9,16 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
+    background-color: #f1f5f8;
 }
 .modal-box{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: 2px solid red;
     width: 40vw;
+    height: 50vh;
+    margin-top: -100px;
 }
 .modal-cart{
     display: flex;
@@ -24,7 +26,11 @@
     align-items: center;
     gap: 1.5rem;
     padding: 8px 2rem;
-    height: 50vh;
+    height: 100vh;
+    width: 30vw;
+    background-color: #fff;
+    border: 2px solid black;
+    border-radius: 5px;
 }
 .modal-title{
     font-size: 3rem;
@@ -36,4 +42,27 @@
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
+}
+.person-name{
+    font-size: 1.4rem;
+}
+.person-job{
+    color: #81b6ec;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+.person-description{
+    font-size: 1.5rem;
+    text-align: center;
+    width: 95%;
+}
+button {
+    background-color: #81b6ec;
+    color: #fff;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    font-size: 1.1rem;
+    padding: 10px 20px;
 }
