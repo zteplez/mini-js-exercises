@@ -3,12 +3,18 @@ class Person {
       this.name = name;
       this.description = description;
       this.job = job;
+      //person should has image this.image = image
     }
   
     introduce() {
       console.log(`Informations -> ${this.name}, ${this.description} -- ${this.job}`);
     }
   }
+
+  const nextBtn = document.querySelector(".left");
+  const prevBtn = document.querySelector(".left");
+
+  let personIndex = 0;
 
   const people = [
     new Person("Ahmet Kaya", "Yazılım Geliştirici", "Kod yazmayı, kahve içmeyi ve açık kaynak projelerle uğraşmayı seviyorum."),
@@ -22,4 +28,13 @@ class Person {
     new Person("Selin Aydın", "Öğretmen", "Bilgiyi aktarmak, ilham vermek ve çocuklarla çalışmak hayatımın anlamı."),
     new Person("Emre Uçar", "Girişimci", "Yeni fikirler üretmek, risk almak ve çözüm bulmak benim işim.")
   ];
-  
+
+
+  nextBtn.addEventListener("click", () => {
+    console.log(people[(++personIndex % people.length)]);
+
+  });
+  prev.addEventListener("click", () => {
+    console.log(people[(--personIndex % people.length)]);
+
+  });
