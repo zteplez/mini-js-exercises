@@ -3,7 +3,7 @@ class Person {
       this.name = name;
       this.description = description;
       this.job = job;
-      //person should has image this.image = image
+      //person should has image this.img = img;
     }
   
     introduce() {
@@ -11,30 +11,46 @@ class Person {
     }
   }
 
-  const nextBtn = document.querySelector(".left");
+  const nextBtn = document.querySelector(".right");
   const prevBtn = document.querySelector(".left");
 
   let personIndex = 0;
 
-  const people = [
-    new Person("Ahmet Kaya", "Yazılım Geliştirici", "Kod yazmayı, kahve içmeyi ve açık kaynak projelerle uğraşmayı seviyorum."),
-    new Person("Zeynep Güler", "Grafik Tasarımcı", "Renklerle oynamak ve hayal gücünü dijital dünyaya taşımak benim işim."),
-    new Person("Mehmet Yılmaz", "Veri Analisti", "Verilerde gizli kalmış hikayeleri bulmayı seviyorum."),
-    new Person("Elif Demir", "İç Mimar", "Minimalist tasarımları ve doğal ışığı seviyorum."),
-    new Person("Burak Can", "Sosyal Medya Uzmanı", "Trendleri takip ederim, içerik üretirim, markaları büyütürüm."),
-    new Person("Aslı Aksoy", "Psikolog", "İnsanları dinlemeyi, anlamayı ve destek olmayı hayat felsefem olarak görüyorum."),
-    new Person("Kaan Tunç", "Müzisyen", "Müziği bir yaşam biçimi olarak görüyorum, sahnede olmayı seviyorum."),
-    new Person("Deniz Arslan", "Fotoğrafçı", "Anı yakalamak, ışığı kontrol etmek ve duyguyu karelere aktarmak benim tutkum."),
-    new Person("Selin Aydın", "Öğretmen", "Bilgiyi aktarmak, ilham vermek ve çocuklarla çalışmak hayatımın anlamı."),
+  const persons = [
+    new Person("Ahmet Kaya", "Yazilim Geliştirici", "Kod yazmayi, kahve içmeyi ve açik kaynak projelerle uğraşmayi seviyorum."),
+    new Person("Zeynep Güler", "Grafik Tasarimci", "Renklerle oynamak ve hayal gücünü dijital dünyaya taşimak benim işim."),
+    new Person("Mehmet Yilmaz", "Veri Analisti", "Verilerde gizli kalmiş hikayeleri bulmayi seviyorum."),
+    new Person("Elif Demir", "İç Mimar", "Minimalist tasarimlari ve doğal işiği seviyorum."),
+    new Person("Burak Can", "Sosyal Medya Uzmani", "Trendleri takip ederim, içerik üretirim, markalari büyütürüm."),
+    new Person("Asli Aksoy", "Psikolog", "İnsanlari dinlemeyi, anlamayi ve destek olmayi hayat felsefem olarak görüyorum."),
+    new Person("Kaan Tunç", "Müzisyen", "Müziği bir yaşam biçimi olarak görüyorum, sahnede olmayi seviyorum."),
+    new Person("Deniz Arslan", "Fotoğrafçi", "Ani yakalamak, işiği kontrol etmek ve duyguyu karelere aktarmak benim tutkum."),
+    new Person("Selin Aydin", "Öğretmen", "Bilgiyi aktarmak, ilham vermek ve çocuklarla çalişmak hayatimin anlami."),
     new Person("Emre Uçar", "Girişimci", "Yeni fikirler üretmek, risk almak ve çözüm bulmak benim işim.")
   ];
 
 
   nextBtn.addEventListener("click", () => {
-    console.log(people[(++personIndex % people.length)]);
+    personIndex = (personIndex + 1)  % persons.length
+    console.log(persons[personIndex]);
+    updateModal();
+  });
+  prevBtn.addEventListener("click", () => {
+    personIndex = (personIndex - 1)  % persons.length
+    console.log(persons[personIndex]);    updateModal();
 
   });
-  prev.addEventListener("click", () => {
-    console.log(people[(--personIndex % people.length)]);
 
-  });
+  function updateModal(){
+    //const personImg = document.querySelector(".person-img img");
+    const personName = document.querySelector(".person-name");
+    const personJob = document.querySelector(".person-job");
+    const personDescription = document.querySelector(".person-description");
+
+    let currentPerson = persons[personIndex];
+    // personImg.src = currentPerson.img;
+    personName.innerText = currentPerson.name;
+    personJob.innerText = currentPerson.job;
+    personDescription.innerText = currentPerson.description;
+
+  }
