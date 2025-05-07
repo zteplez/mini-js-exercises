@@ -59,7 +59,7 @@ body{
     text-align: center;
 }
 .close{
-    background-color: red; /* Green */
+    background-color: red; 
     border: none;
     border-radius: 5px;
     color: white;
