@@ -3,3 +3,76 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: aliceblue;
+}
+.container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: translateY(-100px);
+}
+
+.about{
+    font-size: 3rem;
+    letter-spacing: 5px;
+    padding: 12px 0px;
+}
+.lorem{
+    font-size: 1.25rem;
+    color: gray;
+    padding: 10px 0px;
+}
+.content-box{
+    width: 90%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+    transform: translateY(30px);
+}
+.content-img{
+    width: 50%;
+    height: 100%;
+    border-radius: 5px;
+}
+.main-content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 80%;
+    border-radius: 5px;
+}
+.content-tabs{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.tab{
+    background-color: #efefee;
+    width: 100%;
+    border: 2px solid;
+    text-align: center;
+    padding: 10px 0px;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+.content-text{
+    padding: 10px 20px;
+    height: 100%;
+    background-color: #fff;
+    flex-wrap: wrap;
+}
+.content-text h1{
+    text-align: center;
+}
+.text{
+    font-size: 1.25rem;
+    padding: 10px 0px;
+}
