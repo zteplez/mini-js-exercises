@@ -76,3 +76,7 @@ body{
     font-size: 1.25rem;
     padding: 10px 0px;
 }
+.active{
+    background-color: #fff;
+    border: none;
+}
